@@ -1,21 +1,21 @@
-## yew-feather
+## yew-lucide
 
-[![crates.io version](https://img.shields.io/crates/v/yew-feather.svg?style=flat-square)](https://crates.io/crates/yew-feather)
-[![crates.io downloads](https://img.shields.io/crates/d/yew-feather.svg?style=flat-square)](https://crates.io/crates/yew-feather)
+[![crates.io version](https://img.shields.io/crates/v/yew-lucide.svg?style=flat-square)](https://crates.io/crates/yew-lucide)
+[![crates.io downloads](https://img.shields.io/crates/d/yew-lucide.svg?style=flat-square)](https://crates.io/crates/yew-lucide)
 
-#### What is yew-feather?
+#### What is yew-lucide?
 
-yew-feather is a collection of simply beautiful open source icons for Yew. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.
+yew-lucide is a collection of simply beautiful open source icons for Yew. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.
 
-#### Based on Feather Icons `v4.28.0`
+#### Based on Lucide Icons `v0.17.16`
 
-https://feathericons.com/
+https://lucide.dev/
 
 ### Usage
 
 ```rust
 use yew::{function_component, html};
-use yew_feather::camera::Camera;
+use yew_lucide::Camera;
 
 #[function_component(App)]
 fn app() -> Html {

@@ -10,4 +10,4 @@ edition = "2021"
 
 [dependencies]
 yew = "0.19.3"
-yew-feather = { path = "../../" }
+yew-lucide = { path = "../../" }

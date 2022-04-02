@@ -1,17 +1,18 @@
 {
-  "name": "yew-feather",
-  "version": "0.2.1",
-  "description": "Yew components for Feather icons",
-  "author": "pedrodesu <me.pedro.ferreira@gmail.com>",
+  "name": "yew-lucide",
+  "version": "0.1.0",
+  "description": "Yew components for Lucide icons",
+  "author": "John Toohey <john_t@mailo.com>",
   "contributors": [
+    "pedrodesu <me.pedro.ferreira@gmail.com>",
     "Martin Molzer <ga65guy@mytum.de>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pedrodesu/yew-feather.git"
+    "url": "https://gitlab.com/john_t/yew-lucide"
   },
   "license": "MIT",
   "devDependencies": {
-    "feather-icons": "^4.28.0"
+    "lucide-static": "^0.17.16"
   }
 }

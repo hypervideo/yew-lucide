@@ -1,18 +1,17 @@
 [package]
-name = "yew-feather"
+name = "yew-lucide"
 version = "0.2.1"
 authors = [
+    "John Toohey <john_t@mailo.com>",
     "Pedro Ferreira <me.pedro.ferreira@gmail.com>",
     "Martin Molzer <ga65guy@mytum.de>",
 ]
 categories = ["wasm", "web-programming"]
-keywords = ["wasm", "yew", "feather"]
-description = "Yew components for Feather icons"
+keywords = ["wasm", "yew", "lucide"]
+description = "Yew components for Lucide icons"
 license = "MIT"
 readme = "./README.md"
-repository = "https://github.com/pedrodesu/yew-feather.git"
-homepage = "https://github.com/pedrodesu/yew-feather"
-documentation = "https://github.com/pedrodesu/yew-feather"
+repository = "https://gitlab.com/john_t/yew-lucide"
 edition = "2021"
 include = ["/src"]
 
@@ -25,3 +24,4 @@ yew = "0.19.3"
 [build-dependencies]
 serde_json = "1.0.78"
 convert_case = "0.5.0"
+serde = { version = "1", features = [ "derive" ] }
