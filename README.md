@@ -3,7 +3,7 @@
 [![crates.io version](https://img.shields.io/crates/v/yew-lucide.svg?style=flat-square)](https://crates.io/crates/yew-lucide)
 [![crates.io downloads](https://img.shields.io/crates/d/yew-lucide.svg?style=flat-square)](https://crates.io/crates/yew-lucide)
 
-Forked from (Yew Feather)(https://github.com/pedrodesu/yew-feather)
+Forked from [Yew Feather](https://github.com/pedrodesu/yew-feather)
 
 ## What is yew-lucide?
 
