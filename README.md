@@ -9,7 +9,9 @@ Forked from [Yew Feather](https://github.com/pedrodesu/yew-feather)
 
 yew-lucide is a collection of simply beautiful open source icons for Yew. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.
 
-## Based on Lucide Icons `v0.17.16`
+## Based on Lucide Icons
+
+This will be updated to keep in track with the latest lucide.
 
 https://lucide.dev/
 
