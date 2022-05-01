@@ -19,6 +19,7 @@ enum StringOrObject {
 fn main() {
     println!("cargo:rerun-if-changed=build/");
     println!("cargo:rerun-if-changed=package-lock.json");
+    println!("cargo:rerun-if-changed=node_modules");
 
     Command::new(if cfg!(target_os = "windows") {
         "npm.cmd"
@@ -81,6 +82,7 @@ fn main() {
     ]
     .concat();
 
+    fs::create_dir_all("src").expect("Cannot create src");
     fs::write("src/lib.rs", lib_content.as_bytes())
-        .expect("can write to lib.rs file");
+        .expect("cannot write to lib.rs file");
 }
