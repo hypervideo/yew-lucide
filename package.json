@@ -13,6 +13,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "lucide-static": "^0.83.0"
+    "lucide-static": "^0.84.0"
   }
 }
