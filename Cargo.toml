@@ -1,6 +1,6 @@
 [package]
 name = "yew-lucide"
-version = "0.299.0"
+version = "0.300.0"
 authors = [
     "John Toohey <john_t@mailo.com>",
     "Pedro Ferreira <me.pedro.ferreira@gmail.com>",
