@@ -6,31 +6,44 @@
 
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = import nixpkgs { inherit system; };
+      let
+        pkgs = import nixpkgs { inherit system; };
+
+        yew-lucide = pkgs.rustPlatform.buildRustPackage {
+          pname = "yew-lucide";
+          version = "0.330.0";
+          src = ./.;
+          cargoHash = "sha256-wCawxa8OSNiPWpiViuqusOgVlKDe4Cq0s9AG4NoT6ZM=";
+          nativeBuildInputs = with pkgs;[ nodejs ];
+        };
       in
-        {
-          devShells.default = pkgs.mkShell {
-            nativeBuildInputs = with pkgs; [
-              rustc
-              cargo
-              clippy
-              pkg-config
-            ];
+      {
+        packages = {
+          inherit yew-lucide;
+        };
 
-            buildInputs = with pkgs; [
-              openssl
-              clang
-            ] ++ (if pkgs.stdenv.isDarwin then [ libiconv ] else [ ]);
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            rustc
+            cargo
+            clippy
+            pkg-config
+          ];
 
-            packages = with pkgs; [
-              rust-analyzer
-              rustfmt
-            ];
+          buildInputs = with pkgs; [
+            openssl
+            clang
+          ] ++ (if pkgs.stdenv.isDarwin then [ libiconv ] else [ ]);
 
-            RUST_BACKTRACE = "1";
-            RUST_LOG = "debug";
-            LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
-          };
-        }
+          packages = with pkgs; [
+            rust-analyzer
+            rustfmt
+          ];
+
+          RUST_BACKTRACE = "1";
+          RUST_LOG = "debug";
+          LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
+        };
+      }
     );
 }
