@@ -2,6 +2,7 @@ use convert_case::{Case, Casing};
 use serde::Deserialize;
 use std::collections::HashMap;
 use std::fs::File;
+use std::path::PathBuf;
 use std::{env, fs};
 
 const LIB_SLUG: &str = include_str!("build/lib_slug.rs");
@@ -65,6 +66,9 @@ fn main() {
     ]
     .concat();
 
-    fs::create_dir_all("src").expect("Cannot create src");
-    fs::write("src/lib.rs", lib_content.as_bytes()).expect("cannot write to lib.rs file");
+    fs::write(
+        PathBuf::from(std::env::var("OUT_DIR").unwrap()).join("yew_lucide.rs"),
+        lib_content.as_bytes(),
+    )
+    .expect("cannot write to lib.rs file");
 }
